@@ -1,0 +1,701 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>21-vol2</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="9ddab7e3-af64-441c-a0fa-8437ccd69010" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/rijksmuseum_avercamp_1620.jpg" style="object-position:center 60%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/book_blue.svg"/></div><h1 class="page-title">21-vol2</h1><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>文件中文名</th><td>山水画——东方和西方</td></tr><tr class="property-row property-row-file"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>原件及翻译件</th><td><span style="margin-right:6px"><a href="21-vol2%209ddab7e3af64441ca0fa8437ccd69010/%25E5%25B1%25B1%25E6%25B0%25B4%25E7%2594%25BB_%25E4%25B8%25AD%25E6%2596%2587%25E7%25AC%2594%25E8%25AE%25B0.pdf">山水画 中文笔记.pdf</a></span><span style="margin-right:6px"><a href="21-vol2%209ddab7e3af64441ca0fa8437ccd69010/21-Volume2.pdf">21-Volume2.pdf</a></span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>主题标签</th><td><span class="selected-value select-value-color-blue">古典性</span><span class="selected-value select-value-color-yellow">图像东方</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>理论</th><td><span class="selected-value select-value-color-orange">公共话语空间</span><span class="selected-value select-value-color-brown">图像与“uncanny”</span><span class="selected-value select-value-color-gray">巴赫金：“边境理论”</span><span class="selected-value select-value-color-red">摄影理论</span><span class="selected-value select-value-color-purple">米歇尔：图像的欲望</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>作者身份</th><td><span class="selected-value select-value-color-yellow">外国人</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>作者</th><td>埃莉诺·康斯坦顿</td></tr><tr class="property-row property-row-file"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>拓展参考资料URL</th><td><span style="margin-right:6px"><a href="21-vol2%209ddab7e3af64441ca0fa8437ccd69010/%25E5%25B1%25B1%25E6%25B0%25B4%25E7%2594%25BB_%25E9%2585%258D%25E5%259B%25BE_Modern_Photographs_or_Ancient_Paintings_23-Volume2.pdf">山水画 配图 Modern Photographs or Ancient Paintings 23-Volume2.pdf</a></span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>摘要</th><td>本文研究了中西方绘画的不同点，提出中国化不需要透视、景物作为背景、无固定视点等特点，并且比价了摄影和绘画这两种媒介之间的关系，是媒介研究的绝佳文本。</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Editor</th><td><span class="selected-value select-value-color-orange">朱可涵</span></td></tr><tr class="property-row property-row-url"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesUrl"><path d="M7.69922 10.8945L8.73828 9.84863C7.91797 9.77344 7.34375 9.51367 6.91992 9.08984C5.76465 7.93457 5.76465 6.29395 6.91309 5.14551L9.18262 2.87598C10.3379 1.7207 11.9717 1.7207 13.127 2.87598C14.2891 4.04492 14.2822 5.67188 13.1338 6.82031L11.958 7.99609C12.1768 8.49512 12.2451 9.10352 12.1289 9.62988L14.0908 7.6748C15.7725 6 15.7793 3.62109 14.084 1.92578C12.3887 0.223633 10.0098 0.237305 8.33496 1.91211L5.95605 4.29785C4.28125 5.97266 4.26758 8.35156 5.96289 10.0469C6.36621 10.4434 6.90625 10.7441 7.69922 10.8945ZM8.30078 5.13184L7.26855 6.17773C8.08203 6.25293 8.66309 6.51953 9.08008 6.93652C10.2422 8.09863 10.2422 9.73242 9.08691 10.8809L6.81738 13.1504C5.66211 14.3057 4.03516 14.3057 2.87305 13.1504C1.71094 11.9883 1.71777 10.3545 2.87305 9.20605L4.04199 8.03027C3.83008 7.53125 3.75488 6.92969 3.87109 6.39648L1.91602 8.35156C0.234375 10.0264 0.227539 12.4121 1.92285 14.1074C3.61816 15.8027 5.99707 15.7891 7.67188 14.1143L10.0439 11.7354C11.7256 10.0537 11.7324 7.6748 10.0371 5.98633C9.64062 5.58301 9.10059 5.28223 8.30078 5.13184Z"></path></svg></span>URL</th><td></td></tr></tbody></table></header><div class="page-body"><hr id="8ce4b280-35f4-4f47-b3f3-116f77e7a150"/><h3 id="bf60bed6-1074-48da-a150-81418b0681a6" class="">图像</h3><figure id="466cb518-62d6-46f3-b1fd-8b06ff4a0458" class="image"><a href="21-vol2%209ddab7e3af64441ca0fa8437ccd69010/Untitled.png"><img style="width:690px" src="21-vol2%209ddab7e3af64441ca0fa8437ccd69010/Untitled.png"/></a></figure><figure id="b41461f3-7bf5-4027-aa9f-c7f12568d287" class="image"><a href="21-vol2%209ddab7e3af64441ca0fa8437ccd69010/Untitled%201.png"><img style="width:571px" src="21-vol2%209ddab7e3af64441ca0fa8437ccd69010/Untitled%201.png"/></a></figure><figure id="b960029c-9320-4dd0-84e2-0ed958ff3db2" class="image"><a href="21-vol2%209ddab7e3af64441ca0fa8437ccd69010/Untitled%202.png"><img style="width:593px" src="21-vol2%209ddab7e3af64441ca0fa8437ccd69010/Untitled%202.png"/></a></figure><figure id="e87fe907-253d-48a7-9b1b-023bf8a7f320" class="image"><a href="21-vol2%209ddab7e3af64441ca0fa8437ccd69010/Untitled%203.png"><img style="width:580px" src="21-vol2%209ddab7e3af64441ca0fa8437ccd69010/Untitled%203.png"/></a></figure><p id="bf25509a-7c60-4337-9305-49731e01b191" class="">
+</p><p id="3fb1705c-ef33-4965-8de7-df2c9b59ef9a" class="">
+<strong>文章内容速递</strong></p><blockquote id="77e0d7b5-69a2-4237-8f94-69a5985a8036" class="">作者：埃莉诺·康斯坦顿：前哈佛教授，和摄影师hammer是朋友</blockquote><p id="6281b45d-a07b-4d91-90b1-65b82f1859cb" class="">
+现代的照片可能会被选做为古典中国的主题</p><figure id="93af7728-aa8a-4085-8a88-bc85963195fa" class="image"><a href="21-vol2%209ddab7e3af64441ca0fa8437ccd69010/Untitled%204.png"><img style="width:336px" src="21-vol2%209ddab7e3af64441ca0fa8437ccd69010/Untitled%204.png"/></a></figure><p id="07499107-43df-48c0-b607-7732f7d2b2c7" class="">
+(Consten, p. 7)
+试图理解东西方思维之间的差异，是任何一个在东方和西方都生活过的人的迷人追求。对于这个永恒的问题已经有了许多答案，我们打算在下一期杂志中提供更多的答案，坚持具体的观点，而不是笼统的陈词滥调。下面这篇文章对东西方的山水画进行了迷人而深刻的分析。作者特别适合她的任务，因为她自己是两种文化的产物，母亲是美国人，父亲是德国人。从年轻时起，她就被艺术和中国文化所吸引，在维也纳、柏林和波恩大学学习这两门学科。获得博士学位后，她前往美国哈佛大学拉德里夫分校攻读研究生。一位好心的朋友告诉她的第一件事是:“不要告诉任何人你23岁就拿到了博士学位，否则你将永远没有约会机会。”康斯坦顿医生认为她朋友是对的。康斯坦博士曾在哈佛大学福克博物馆东方部工作数年。然后她先搬到日本，后来又搬到中国，在这里嫁给了研究蒙古事务的作家康斯坦恩先生。她著有两本关于中国艺术的书，现居北京。北京的海达·哈默小姐是中国题材最优秀的摄影师之一，她贡献了三张关于奇异中国风景的优秀照片。</p><p id="aa4e14b6-8aa0-4c71-b8c4-8862ea248cda" class="">
+画家有所作为人类总是观察周围的自然，并享受他所看到的。大地，石头和岩石，树木，草和花，在季节和时间的变化中，不断重复，但从不完全相同——这些景观被构建起来，无论是平坦的贫瘠土地，还是有树木、小溪和瀑布的山脉。西部和东部的景观基本上是一样的，包括温带所有可能的变化。这是画家的功劳。对西方画家来说，乡村是一本书，每页上都有不同的图画;大自然的每一个方面都有它的美。他从未放弃探索这片土地的每一个角落以寻求新效果的权利，我们有无限的可能从新的角度为一幅新的、不同的图景找到新的视角。并非都是夸张但是中国人，在他们的景观艺术的早期阶段，只在一种类型上盖章-山水(景观)“山和水。”他们专门画在西方人看来有些夸张的风景画。它经常被夸大，但并没有我们想象的那么严重。今天的摄影师看到神山华山的悬崖、峡谷、松树和雾霭，就像唐宋时期醉心于线条和尺寸的鲜明对比的画家所看到的那样富有戏剧性和令人敬畏。岩石被划成长长的平行线。</p><p id="df65a508-fcfa-46bc-b9ad-69b06f944919" class="">
+山峦起伏，像愤怒的海浪，顶着松树。勇敢的树木攀附在坚忍不拔的磐石上;朝圣者的路也是如此，台阶被切成深深的斜坡。(图一，摄影:Hedda Hammer。雾强调了它们与背景中的山丘之间的距离，这是一段无法测量和跨越的距离。高耸的悬崖出现在雾中;背景是一段无法测量和跨越的距离。高耸的悬崖出现在雾中;它们参差不齐的线条被吞没大地和天空的薄雾软化了。我们不知道坚实的地面在哪里结束，无限在哪里开始。(图三，由Hsia Kuei, Xia GUI，晚12分。第四，作者:HeddaHammer。)无限开始了。(图三，夏桂，夏桂，12世纪晚期。图四，海达汉默。)</p><p id="339e6df3-ad29-4cf7-a95a-34ff23986667" class="">
+这种壮阔壮阔的景象成为了所有中国画家的作品，即使是那些生活在大平原上从未见过如此壮阔景色的画家也不放过。对他们来说，从难以置信到不可能只有一步之遥，如果大自然的宏伟壮观达到了他们的目的，他们就不会把这种差异看得很重要。山水画的技术被标准化到这样的程度，在它们被黑白程式化之后，奇妙和平凡似乎并没有那么遥远。西方最初是在瓷器和漆器上认识了中国最夸张和最简略的风景，他们一直没有完全摆脱对中国的第一眼的震惊，主要是脆弱的小寺庙，
+摇摇晃晃地坐落在最危险的破坏悬崖上。</p><p id="e697b3f6-aaa7-4482-9c94-d32f0750052c" class="">
+<strong>主人还是创造物?</strong>
+中国画家按照公认的风格作画，选择古代大师的历史悠久的题材;西方画家只依靠自然本身和他亲眼所见。然而西方画家的态度并不是谦逊的;相反，它是同心的。人是大自然至高无上的荣耀E1的主人。风景只是他能看到的;它停在地平线上，那个想象中的世界尽头，不过是人类视力的极限。人和他的行为往往是西方风景的中心，或英勇或亲密。即使画中没有人的身影，强调的仍然是人的个性、画家和他对主题的选择。中国山水画的构图很清楚地表明，人的视野没有被利用;只有飞翔的鸟才会这样看世界。只有一个不受万有引力定律约束的灵魂，才会相信世界没有地平线，在那里，世界结束了，我们坠入了虚无的边缘。中国画家知道，在空虚中会升起更多的山峰和新世界。在自然界中，东方给予人类的地位较低;他的重要性与他的体型成正比。山路上的旅行者，冥想的学者，对于完整的宇宙再现来说，就像岩石和树木一样必要——并不比他们更重要一点。人类碰巧是大自然众多生灵中的一员，而不是她的主人。</p><p id="4af18ef0-1944-4b39-adbe-e4413f0ea323" class="">
+<strong>景观作为背景</strong>
+西方的山水画最初是作为肖像和绘画故事讲述的合适背景。中国也是如此;但这是一个短暂而不重要的阶段，而在欧洲，这种景观发展得很慢。在整个中世纪，它一直处于从属地位。荷兰、德国、法国和意大利的画家把美丽的风景画成宗教画的背景;它们或广阔或亲密，或奇妙或忠于自然，它们拥有一个独立的景观应该拥有的一切，除了人们的认可。今天的艺术历史学家，利用现代摄影技术，用放大的背景细节复制品来取悦我们。在画布上，它们很小而且很容易被忽视，然而画家在它们身上倾注了如此多关于自然的知识，以至于当风景最终被认为是为其本身而值得表现时，画家们几乎没有什么可学的——只要撇开前景，就有了一个完整的风景。中国人一直明白，一幅肖像或一些户外场景
+的背景不同于真实的风景，也不如真实的风景，就像人及其行为不如宇宙一样。当他们画圣人或花园里的人时，他们也用岩石、山丘和树木，用景观技术完成;但他们把它们当作“道具”，它们并没有给单纯的场景指示赋予深度和节奏。背景是有限的，它服务于明确的解释目的;风景是无边无际的，它只有展现自己。它的范围使人类和他的琐碎活动相形见绌，直到它们占据了适当的、微不足道的位置。
+坐下来工作一天西方画家早上收拾好他的绘画工具，吃完午饭，出去寻找一个合适的主题。他以批判的眼光审视这个观点和那个观点，在脑海中形成框架，并把它挂在墙上(最好是博物馆的墙上)。画布的大小和形状影响了他的决定。他找到一个理想的主题，拿着画架和颜色坐下来，在那个特定的地方开始一天的工作。现在他必须展示他的技术。他必须把自然的一部分限制在一个给定的空间内，这样她的无限就不会对框架产生压力。他必须找到一个所有线条都指向的点，远离画框，这样画框就能成
+为一种保护和逻辑边界，而不是监狱的栅栏。</p><p id="d4ca81ae-8e16-40b3-8dcc-05798c8c9e28" class="">这张照片会对观者说:这是一个完美的地方，线条和色彩和谐。我被画的那一刻是完美的;在我心中，时间为你静止。在我之外的世界没有重要性;在我中间安居，你就不再有别的欲望。西方画家会走进森林，他会看到周围是树干的图案，头顶是茂密的树叶，他会看到深深的阴影和点点的光，颜色和形式会向他逼近，给他一种与自然亲密无间的感觉。他专注于瞬间的意外之美，专注于光对色彩的影响。他的风景是由静态的形式构成的，他把它们放在彩色的区域里。他喜欢色彩和色调的无限而微妙的阴影。他只画他所看到的，他只通过颜色的差异来观察形状。因为天空和云是有颜色的，对他来说，它们就像树木和石头一样清晰，他画出了他所看到的天空——一片平坦的蓝色。他必须仔细研究他的视角，因为只有通过模仿人眼的集中力量，通过复制它的能力，在它注视的地方创造一个消失的点——只有这样，画家才能希望把一个视野聚集到一个小空间里，把它从宇宙中切割出来，而不让边缘流血。在河的拐弯处作家兼艺术家戈特弗里德·凯勒(Gottfried Keller)画了一条河的拐弯处:右边一棵大树遮蔽了垂钓者，左边一群树木挡住了视线(图六)。颜色从温暖的棕色到丰富的绿色，再到天空的湛蓝。没有轮廓，只有数不清的色彩变化，安排得全面而美观。任何视点的改变都会破坏质量和颜色的微妙平衡。我们没有办法去上游，去了解弯道那边的风景和树木是什么样子——我们不应该这样做。我们的位置就在画框的边缘，我们平静地坐在那里，就像垂钓者摆好姿势拍照一样。右面是河流，有一丛树木(图五)。一个小人儿过桥;不知道画家或旁观者，它跟随路径进入背景。只有空虚来平衡树木和大地。但风和水在其中移动，树木和灯心草指向它，远山也溶入其中。我们必须沿着河流的流向绕过弯道，因为在那里我们会发现真正的风景，而画上的风景只是一个向导和一个承诺。中国山水是宇宙以及创造和维护宇宙的精神的代表;两者都是永恒和无限的。色彩是偶然的，静态的，赏心悦目;线条总是在移动，在创造一个形式的同时，它已经指向下一个形式，它邀请精神追随远远超出画面的尽头(没有框架)，超越人造的地平线。
+去散步一天将它们浓缩成一种清晰的旋律形式，这种旋律虽然使人联想到自然，但却遵循纯粹艺术起源的法则。</p><p id="74623419-08e7-421a-87a2-1fea3466fbe6" class="">在许多西方家庭，风景摄影可能会成功地取代绘画;对东方人来说，它可能是一种新的、迷人的艺术形式，而不仅仅是古老景观的另一种技术。中国画家不描绘自然，他不描绘某天某时某点的风景，就像在露营时看到的那样。他想要一个更广阔的视野，一个更全面的乡村再现，而不是只看一眼。他像音乐家一样工作，聆听着面前许多树木的声音中国画家漫游乡村，看着变幻的风景，记住动人的线条，忘记偶然的细节(图七)。他在乡村客栈的木桌下伸展疲惫的双腿，和山庙的和尚一起喝着自制的酒。他爬上一座小山，坐下来休息，凝视着风景，风景会向他展现自己远远超出他眼睛的力量，因为他走过了漫长的道路，他知道他只能希望通过理解宇宙的本质，通过把他的灵魂送到他眼睛无法到达的地方，来公正地对待宇宙的浩瀚。他坐着渔夫的船渡过小溪，到瀑布边的茅屋里拜访退休官员。他们讨论哲学和国家事务，当远处树木的叶子在苍白的轮廓衬托下形成黑影时，他们轻易地忽略了不重要的细节。中国的传记作家们毫不讳言艺术家们嗜酒如命的癖好——当画家继续上路的时候，他可能已经有点微醺了，很乐意接受驴子的服务。当他凝视着近处和远处的悬崖时，他的头脑中会有不可估量的维度，他会知道，湍急的水流、驴的小跑、生长的树木和高耸入云的山峰之间的速度差异，在永恒的光芒中真的可以忽略不计。</p><p id="cd095303-7b86-4bdf-952d-de0ae688200c" class="">
+<strong>无固定视点</strong>
+于是他回到书房，掸去桌子上的灰尘，铺上干净的白绸布。他的脑子里满是白天的印象，这让他比爬过的山还高，他用画笔迅速地写下他的风景——只有自然的“骨头”，正如古代经典所说的那样——他会把这幅画交给他的哲学家朋友，他的想象力只需要一些暗示，就可以用丝绸所能承载的更多的山和树来填满空白。这幅长长的手卷非常适合中国的山水观念。画者和观者随着画卷的展开一同前行，一幅景象与另一幅景象相融合。许多景观结合在一起成为自然的叙述，不受固定观点的限制，不依赖或组成从外面。然而，更多的中国山水画是画在卷轴上的。中国山水画不是对一个细节的选择，而是对整体的概括，所以手卷或挂卷的范围变化与宇宙的广阔相比是微不足道的。局限在于题材的选择，只有山和流水才有资格。唐代的第一批山水画家选择这样的风景，这在缩小画家的选择范围方面发挥了重要作用;但是，即使是一个中国人，对传统的热爱也不能阻止他向其他类型发展，如果坚实的山丘向上的强大推力和清澈的水流向下的屈服没有完美地表达出他对赋予宇宙生命的力量的概念的话。</p><p id="8e085824-0e17-4c2e-93d0-8437152d4219" class="">
+<strong>中国人不需要透视</strong>
+透视只会破坏中国风景的范围;集中的成分会阻止灵魂的航行。中国的画面邀请我们随时改变我们的观点。我们从山顶出发，眺望其他山峰，我们潜入山谷，看到河床上的石头，我们跟随朝圣者来到远处的宝塔。透视法平衡了西方画面的每一个角落和细节，使其与主体形成即时的、正式的联系。中国画家给了我们节奏而不是平衡，从而确保了每一个景观小单元的自主性。我们可以依次进入画面的各个部分，从一个部分走到另一个部分，我们不会因为缺乏统一的视点而烦恼，就像在一个熟悉的房间里走动时，我们不会因为眼前的画面不断变化而烦恼一样。这位中国画家运用了足够的法则，使画不至于散架。巍峨的山峰是基调，背景中的建筑略小前景、轮廓和远山的细节被雾模糊了。但是他并没有指定观察者不能偏离的确切位置。我和乡村小医生十一世纪的郭宪(图七)在一幅画中融合了许多场景，一个完整的世界充满了他的带，足以让我们了解宇宙是什么样子的。劳伦福特，当代美国人(图。第八)，他带回家许多详细的康涅狄格乡村的草图，并把它们组合成一幅全景图，似乎是用中国的方式。她以东方的方式工作，结合不同时间看到的风景;她还采用了鸟瞰和高空视角。但这幅画似乎只是分散的;西方人不能放弃已批准的标准;这样的照片一定是有理由的。于是艺术家介绍了“乡村医生”:他从中间进入房子，并给这幅画起了名字——我们马上又回到了同心圆类型。一个引人入胜的戏剧性时刻是整幅画的理由和关键所在，尽管我们很难从周围丰富的细节中辨认出医生的小小身影。尽管它的范围，它的地点和活动的多样性，这幅画是一个亲密的;它唤起了非常个人的怀旧情绪。我们已经有了那天的色彩，我们又从记忆中加上了鸟鸣和干草的气味。对新英格兰人来说，这幅画代表了地球上一个非常珍贵的角落，而不是整个世界。总的来说，中国画家总是一个世界主义者，即使他只画竹林和有曲线屋顶的寺庙。</p><p id="eb6b3ca8-7f52-4da7-8ddc-f064a9170dba" class="">
+<strong>拿着刷子的警察</strong>
+西方的风景画很少真正糟糕，只要画家有相当多的色彩感和技巧还学过构图和透视的法则。因为主题是美丽的，即使不太熟练的效果图也会赋予画家选择描绘的地方的魅力，这幅画会让那些喜欢那个特定地点的人高兴。如果中国的风景画得不好，那就没有什么值得欣赏的了。这个主题太普通了，经常被重复，太程式化了，无法激发观众的任何感觉。如果节奏是混乱的，如果线条的横扫是没有生命的，如果阴影是粗糙的，那么再多的“笔触”技巧也挽救不了画面。这完全是对纸张、丝绸、墨水和时间的浪费——许多中国风景画都是如此。学习山水的“手艺”似乎很容易:取山川、瀑布和松树，在小人上点缀，用一些特色笔画和一些构图规则混合，搅拌均匀，再披上丝绸。沉溺于一种高雅的消遣并不能保证有惊人的结果;如果一个从事这种愉快工作的人不是天才，那么再多的古代大师作品
+也不会对他有任何好处。
+我曾看到一名在城市派出所执勤的警察在空闲的时候，与住在茅屋里的学者们一起用纸扇画山和竹林。对外行人来说，这样的结果是相当迷人的，但其艺术价值几乎比不上一张令人愉快的图片、明信片或日历装饰。如果宇宙的精神没有给画家灵感，它也不能使观者产生任何感觉。这幅画就像许多现代艺术的创作一样，在一堆本应反映大众品味的clichés下面隐藏着灵感的缺乏和健全训练的缺乏。事实上，不仅要改变心态，而且要获得一种全新的哲学，这可能有助于解释，为什么
+即使在中国的外国人中，他们是中国风景的狂热崇拜者，但很少有人试图画东方风格的画，而相反的努力的结果却相当值得称赞。当下的颜色彩色风景在中国并不陌生，但在西方人看来，这些颜色似乎有限、粗糙、不自然，事实也的确如此。他们在研究中是根据一个传统的系统，一个标准的彩色图表概括地来自自然。色彩必须局限在一个地方，它是偶然的，它可能会随着灯光最轻微的变化而变化。中国人更喜欢把这种不稳定的元素剥离出去，他只使用从明亮的黑色到浅灰色的墨水色调，它们强调线条，并随着线条移动;他们暗示颜色而不定义颜色。给一幅画画上颜色，它使它成为一个永远不会回来的完美时刻的孩子。因此，画家把他所有的技巧都放在选择正确的时刻和色彩的和谐上，这是他绘画的支柱。
+莫里茨·冯·温纳德”德国人浪漫的画家，描绘了一个流浪者在树荫下休息看风景(图ix)。我们看到了那景色的每一个细节，被树包围着，前景是灿烂的红色和绿色，后面的小山渐渐变成浅蓝的阴影，上面是蓝天和白云。我们在宋宗宗的一幅画中发现了同样的主题和构图(交替)，同样的保护树，同样的人物在树下休息，在这脚下眺望着国家(图X)。但对中国画家来说，天空并不是限制，云流逝得太快，无法在丝绸上留下印记。空无一物是画面中最重要的部分，我们跟随那个人的目光进入其中，我们看到的比任何画家的画笔所能画出的还要多。受画中书生凝神沉思的启发，我们的想象力展翅飞翔，穿过薄雾和阳光，飞越高山和山谷。那么为什么要画风景呢?一个被宇宙吞噬的学者，一个有岩石和树木的人，比任何线条或颜色都
+更具启发性。</p><p id="36057138-4e8d-4abb-be0d-91be9e8e4630" class="">
+<strong>苔藓还是翅膀?</strong>
+    中国的风景给观赏者插上了翅膀，却不能让他休息。他不能徘徊在幽静的小树林里柔软的苔藓上，h或在柯罗的树荫下，他不能在瑞斯代尔的小村庄里找到自己的家。他必须从远处看森林;他必须经过路边的小屋，走到山上的宝塔那里，那里没有遮蔽的地方;他将从那里起飞，进入充满更多山脉的太空，从明天的薄雾中升起。西部的景色使我们想起了过去的某个夏日，那时我们自己也曾在我们所热爱的国家看到过那样灿烂的阳光和色彩。为了取悦我们的眼睛，它融合了色彩和平面的偶然之美，保存了一个美丽的瞬间，否则就会丢失。</p><p id="01ac2c2d-13f7-4d22-801e-5ac86ba01445" class="">  如果我们敢于放弃我们的安全立足点，中国的风景将向我们展示创造的所有荣耀那是我们所主宰的一小部分世界。它满足了人类长久以来对翅膀的渴望，满足了浮士德追随太阳轨迹的渴望:啊，没有翅膀能把我从泥土中举起来，沿着它的轨道，跟着高飞!然后我将看到永恒的黄昏镀金，我脚下的寂静世界在发光，每座山峰都在燃烧，每座山谷都充满了和平，银色的小溪流向金色的河流。山脉，连同它所有的峡谷深处，现在，在我的眼前，辽阔的海洋和它的海湾，在明亮的睡眠中。</p><p id="fac77911-420b-4548-bfeb-b0e6d1d0c991" class="">
+</p><p id="1b0b6433-d76c-4a9c-9ff4-12e795108b29" class="">
+</p></div></article></body></html>

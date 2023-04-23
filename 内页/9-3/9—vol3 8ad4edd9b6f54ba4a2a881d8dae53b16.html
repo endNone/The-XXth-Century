@@ -1,0 +1,675 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>9—vol3</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8ad4edd9-b6f5-4ba4-a2a8-81d8dae53b16" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/met_jean_beraud.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/book_blue.svg"/></div><h1 class="page-title">9—vol3</h1><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>文件中文名</th><td>“火”车 | The fire wagon</td></tr><tr class="property-row property-row-file"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>原件及翻译件</th><td><span style="margin-right:6px"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/%25E3%2580%258A%25E7%2581%25AB%25E8%25BD%25A6%25E9%259B%2586%25E3%2580%258B.docx">《“火”车集》.docx</a></span><span style="margin-right:6px"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/%25EF%25BC%2588%25E5%25B7%25B2%25E5%258E%258B%25E7%25BC%25A9%25EF%25BC%2589The_Fire_Wagon_Lao_She(1).pdf">（已压缩）The Fire Wagon ——Lao She(1).pdf</a></span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>主题标签</th><td><span class="selected-value select-value-color-default">国民性</span><span class="selected-value select-value-color-yellow">图像东方</span><span class="selected-value select-value-color-pink">文学作品</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>理论</th><td><span class="selected-value select-value-color-purple">印刷现代性的“在地化”</span><span class="selected-value select-value-color-yellow">翻译</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>作者身份</th><td><span class="selected-value select-value-color-purple">有留学背景的中国人</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>作者</th><td>老舍  |  翻译者：霍福民</td></tr><tr class="property-row property-row-file"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>拓展参考资料URL</th><td><span style="margin-right:6px"><a href="https://kns.cnki.net/KXReader/Detail?invoice=Q17%2BnK5%2B7usXfBePOCSHoncktPgAboOnzVLCXss0FfekFYQzvFpVMxPfEIyI1OJ8ipwaO2jU9Y4b5PrP2QwV5ShA4fRBkqAYDsojmNT0cOPt139yzG5NVP53b%2Bp7ddjWz1wg%2F1Ta3LVy9%2By6KRnRj34MFJus%2BtOQk%2BI3%2BiB0eV4%3D&amp;DBCODE=CJFD&amp;FileName=MZWX198904007&amp;TABLEName=cjfd8589&amp;nonce=2A336F1C891B427196B94CF51B5E5CB0&amp;uid=&amp;TIMESTAMP=1678103639541">https://kns.cnki.net/KXReader/Detail?invoice=Q17%2BnK5%2B7usXfBePOCSHoncktPgAboOnzVLCXss0FfekFYQzvFpVMxPfEIyI1OJ8ipwaO2jU9Y4b5PrP2QwV5ShA4fRBkqAYDsojmNT0cOPt139yzG5NVP53b%2Bp7ddjWz1wg%2F1Ta3LVy9%2By6KRnRj34MFJus%2BtOQk%2BI3%2BiB0eV4%3D&amp;DBCODE=CJFD&amp;FileName=MZWX198904007&amp;TABLEName=cjfd8589&amp;nonce=2A336F1C891B427196B94CF51B5E5CB0&amp;uid=&amp;TIMESTAMP=1678103639541</a></span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>摘要</th><td>小说描写了大年三十晚上，在返乡途中的火车上张先生取来两瓶白酒，邀请乔、苟一起喝酒，酒酣抽烟。不小心点燃了火车上的爆竹，使火车真的成为了“火”车。</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Editor</th><td><span class="selected-value select-value-color-orange">朱可涵</span></td></tr><tr class="property-row property-row-url"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesUrl"><path d="M7.69922 10.8945L8.73828 9.84863C7.91797 9.77344 7.34375 9.51367 6.91992 9.08984C5.76465 7.93457 5.76465 6.29395 6.91309 5.14551L9.18262 2.87598C10.3379 1.7207 11.9717 1.7207 13.127 2.87598C14.2891 4.04492 14.2822 5.67188 13.1338 6.82031L11.958 7.99609C12.1768 8.49512 12.2451 9.10352 12.1289 9.62988L14.0908 7.6748C15.7725 6 15.7793 3.62109 14.084 1.92578C12.3887 0.223633 10.0098 0.237305 8.33496 1.91211L5.95605 4.29785C4.28125 5.97266 4.26758 8.35156 5.96289 10.0469C6.36621 10.4434 6.90625 10.7441 7.69922 10.8945ZM8.30078 5.13184L7.26855 6.17773C8.08203 6.25293 8.66309 6.51953 9.08008 6.93652C10.2422 8.09863 10.2422 9.73242 9.08691 10.8809L6.81738 13.1504C5.66211 14.3057 4.03516 14.3057 2.87305 13.1504C1.71094 11.9883 1.71777 10.3545 2.87305 9.20605L4.04199 8.03027C3.83008 7.53125 3.75488 6.92969 3.87109 6.39648L1.91602 8.35156C0.234375 10.0264 0.227539 12.4121 1.92285 14.1074C3.61816 15.8027 5.99707 15.7891 7.67188 14.1143L10.0439 11.7354C11.7256 10.0537 11.7324 7.6748 10.0371 5.98633C9.64062 5.58301 9.10059 5.28223 8.30078 5.13184Z"></path></svg></span>URL</th><td></td></tr></tbody></table></header><div class="page-body"><figure id="1aa071e4-3a0a-4a4b-864e-2c25364032ed" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled.png"><img style="width:1062px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled.png"/></a><figcaption>图一：《火车》一文的头图，简笔和漫画风格结合</figcaption></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="23796687-9e1d-4af8-b99e-69862e006666"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">老舍是不否认文学的现实性作用，他的笔触往往延伸到民族精神的挖掘或者民族命运的思考，让人从轻快诙谐之中品味出生活的严峻和沉重。他在这篇小说中运用大量的象征和讽刺解释国民性的麻木不仁。塑造了一系列人物形象。</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d590ab1e-b48e-4d50-acd0-4335ac9394ff"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">但是我们不禁要问？为什么报刊编辑K.M.会选择这篇文章刊登？我们是否可以大胆地猜想，老舍意在唤醒国民而塑造的庸众形象，恰暗合了K.M.对于麻木不仁、愚昧无知的中国民众形象的认知？</div></figure><p id="4f2490e9-abe4-44d8-b8c4-8ac5dc8e7fd6" class="">
+</p><hr id="c10c1261-a4b5-4983-bf37-084ddd586d29"/><blockquote id="56726720-dfca-45f7-99f7-6a7b59b8723b" class=""><strong>一、作者：老舍</strong></blockquote><blockquote id="eb4c1033-6b45-484a-85a9-6d640e2ced43" class=""><strong>1.（有留学背景的中国人）</strong></blockquote><blockquote id="78d1d855-afcd-40a3-ac5a-031e2f7af197" class="">1924年，赴英国，任<a href="https://baike.baidu.com/item/%E4%BC%A6%E6%95%A6%E5%A4%A7%E5%AD%A6%E4%BA%9A%E9%9D%9E%E5%AD%A6%E9%99%A2?fromModule=lemma_inlink">伦敦大学亚非学院</a>（School of Oriental and African Studies, University of London）讲师。</blockquote><blockquote id="1e234b24-d0e9-4afd-9a43-cb676bc895e1" class=""><strong>2.老舍的创作</strong></blockquote><blockquote id="8526ccb6-d89a-4082-8e2b-303d20357dd0" class="">《”火“车》第一次发表是在1937年5月1日出版的《文学杂志》创刊号上</blockquote><blockquote id="16a0ee99-d58d-413c-bc2d-f11dce896f5d" class="">老舍的作品大多取材于市民生活。他善于描绘城市贫民的生活和命运，尤其擅长刻画浸透了封建宗法观念的保守落后的中下层市民，在民族矛盾和阶级搏斗中，在新的历史潮流冲击下。惶惑、犹豫、寂寞的矛盾心理，和进退维谷、不知所措的可笑行径。他喜欢通过日常平凡的场景反映普遍的社会冲突，笔触往往延伸到民族精神的挖掘或者民族命运的思考，让人从轻快诙谐之中品味出生活的严峻和沉重。
+<strong>3.小说家的小说观</strong></blockquote><blockquote id="fa5e0827-8ab5-4cc7-abeb-69df55220bf9" class="">在作家不受外力干涉下进行自由表达的基础上，老舍进一步加深了个人的文学思考深度-----形式的美好。老舍多次提出“文学是以美好的文字为心灵的表现。”同时受到英国文学的启发，追求简洁朴素的语言风格“脱去花艳的衣裳，而露出文字的躶体的美”，这在很大程度上是与英国文学相通的，同时也是老舍受狄更斯等作家影响后在创作上的重要投影，是老舍文学思想不可分割的一部分。
+表达自由和形式美好是老舍最基本的追求，在这基础上老舍也反对文以载道的文学观，但并不否认文学的社会性和社会作用，如老舍早、中期的小说中心旨意都是探索振兴国运、强盛民族之路的。老舍是以平民生活为描述对象，以传统伦理道德的哲学观为思想基础，以人道主义的善恶观为最基本的出发点，以是否有利于振兴国运、强盛民族为尺度，而进行文学描述的。</blockquote><blockquote id="15df3bb1-e5b0-4e4b-a461-cbfdc72f92e6" class=""><span style="border-bottom:0.05em solid"><em><strong>翻译者：</strong></em></span></blockquote><blockquote id="8cf15c3e-ddf5-4668-b860-dc8c8bd00704" class="">Dr.alfred hoffmann of the “deutschland institut”in peking</blockquote><blockquote id="a4457d1d-f20b-41b7-8d6c-654a08ec8310" class=""> 德国研究所的阿尔弗雷德·霍夫曼博士</blockquote><hr id="2a0907d3-b668-4ade-a45e-903df2d03bab"/><h2 id="63d20020-4d31-4c04-b140-ac1868ce68fb" class="">二、翻译问题：</h2><h3 id="fdb1d56d-9792-4ba0-a1bc-df6092a6cb53" class="">1.标题翻译问题：——理解的不充分?</h3><ul id="3bfca94d-7e9b-4cfb-9841-12deda34997a" class="bulleted-list"><li style="list-style-type:disc">中文题目：“火”车</li></ul><ul id="ef336ffa-f20f-4e32-909f-650bde8da608" class="bulleted-list"><li style="list-style-type:disc">《二十世纪》翻译题目：The fire wagon</li></ul><figure id="636aa5ee-2654-4014-90d1-a6dd9d56de66" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%201.png"><img style="width:528px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%201.png"/></a></figure><ul id="b8decca1-0d40-42f0-b35f-c1bd624e9c32" class="bulleted-list"><li style="list-style-type:disc">1946年《中国当代短篇小说集》：The last train   (关注到了老舍双引号的含义，以及“火”车的特殊含义)</li></ul><figure id="d2564450-7164-4259-8457-9533ac1670fb" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/%25E5%25BE%25AE%25E4%25BF%25A1%25E6%2588%25AA%25E5%259B%25BE_20230306150354.png"><img style="width:1151px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/%25E5%25BE%25AE%25E4%25BF%25A1%25E6%2588%25AA%25E5%259B%25BE_20230306150354.png"/></a></figure><h3 id="d9057aa0-0c87-43e2-935c-80689cff7df9" class="">2.对于北京方言翻译的删减，对于表现底层人物粗鄙性话语的省略：</h3><div id="15c80cae-fdce-4f3e-9242-e67d13b4e430" class="column-list"><div id="e04c021b-6ca5-4f98-874f-224e107aac68" style="width:50%" class="column"><figure id="2a5a0203-2392-4452-bfa1-9384fca5b3c6" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%202.png"><img style="width:906px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%202.png"/></a></figure></div><div id="8351b90f-f35e-43a1-89ea-79061ee8d687" style="width:49.99999999999999%" class="column"><figure id="47648dd7-c788-4a87-a88c-fe3ecf0890a8" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%203.png"><img style="width:495px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%203.png"/></a></figure></div></div><div id="4da87a58-90c1-43a3-b620-503c71a1a5cf" class="column-list"><div id="1005b552-64d2-4329-b994-f128d8d845d6" style="width:50%" class="column"><figure id="a5ccd41f-b348-460a-837c-b647a3b43fed" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%204.png"><img style="width:947px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%204.png"/></a></figure></div><div id="9260fc51-1e7e-421f-93b8-938280ed2232" style="width:50%" class="column"><figure id="2d21a9f5-2c3c-45b2-988b-96f4a603da5f" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%205.png"><img style="width:496px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%205.png"/></a></figure></div></div><p id="3cec42b8-0a3e-4476-9ba3-452c46725792" class="">
+</p><hr id="74f9d334-60ff-4ccb-806b-0d1e261efef7"/><h3 id="b6a7379c-0c6d-497e-81eb-c2400e553952" class="">三、<strong>”被选择“的国民性？</strong></h3><h3 id="4296d7df-503d-4146-80e8-ef7f17dae310" class="">老舍在小说中塑造的人物形象：</h3><p id="596890d7-1186-4900-9cb7-4cc4a5b54935" class="">这种人物结构很类似人相展览式的戏剧舞台,《“火”车》里各个人物基本上是并列的,同时又被一种特定的“关系”联成一个整体,这是作者的着眼点和揭示意图。正是这种“关系”导引出这场把火车变成“火”车的现实中的悲剧和艺术上的喜剧。</p><ul id="391d0b36-b1c9-42c5-a4d4-d8a23b165bcf" class="bulleted-list"><li style="list-style-type:disc"><strong>小崔</strong></li></ul><p id="9f6907e2-0418-40aa-84cc-4448688da597" class=""><strong>圆滑</strong>  ：</p><p id="10c6e169-02ed-4734-bea0-278ccf2d2911" class="">“他，谁也不得罪，所以谁也不怕；小崔这张车票——或是绿脸——印着全部人生的智慧”</p><p id="9ab8c694-e718-42e2-a1b3-88ff8168bf9e" class=""><strong>粗俗</strong>：“我还不是这样？大年三十还得跑这么一趟！这还不提，明天，大年初一，妈的还得看小红去！人家初一出门朝着财神爷走，咱去找那个臭×, ×</p><ul id="0b9c21fe-9cca-48a6-a168-79273b68ac43" class="bulleted-list"><li style="list-style-type:disc"><strong>苟先生：</strong></li></ul><p id="fbfb6b90-b011-484d-a3be-0a72b08c641a" class="">宋段长的亲戚 体面 高冷</p><p id="57aa867e-bac5-46c5-aabc-c3d8e9b5de4f" class="">“苟先生没法再不脱去大衣。脱下，眼珠欲转而定，欲定而转，一面是想把大衣放在最妥当的地方，一面是展示自己的态度臃重。衣钩太低，挂上去，衣的下半截必窝在椅上，或至出一二小摺。平放在空椅上，又嫌离自己稍远，减少水獭领与自己的亲密关系，亦不能久放在怀中，正如在公众场所不便置妾于膝上”</p><p id="1e8ac3cf-25c3-4450-96b0-75908b1e00bd" class="">张先生取来两瓶白酒，邀请乔、苟一起喝酒。张先生喝完酒抽烟，随手仍的烟头点燃了爆竹堆，引发了火灾。</p><hr id="bdebd045-af77-4033-b7b4-ff58823a536a"/><h3 id="e20fc186-5c07-4ee5-a6e5-63ca3c385750" class="">k.m.心目中的中国人形象</h3><p id="3938d6ee-13e1-4b27-a08a-63bb37bdd304" class=""><strong>1.圆滑粗俗的底层人物——小崔</strong></p><p id="42faa8a7-64dd-4bc7-aafd-d127dad4f0dd" class=""><strong>2.有关系攀附的中层官宦 有身份有地位的人</strong></p><p id="9f7c8218-e448-4ca8-b67a-0010e1b0ea75" class=""><strong>3.整体麻木不仁的中国民众群像</strong></p><p id="3c93c491-2959-4099-9c96-26c2a7f9457d" class="">在火车起火后，带着火光经过火车站台，但是却没有一个中国人发现：“站长半醉，尚未到站台，车已过去；及至站台，微见火影，疑是眼花。持签的交签，持灯的灭灯，搬闸的复闸，路警提枪入休息室，心里都存着些火光，全不想说什么。过了一会儿，心中那点火光渐熄，群议如何守岁，乃放炮，吃酒，打牌，天下极太平。”（麻木的群众）</p><p id="6cb8b383-63fe-4909-a7d2-cfbf95d98d36" class="">“又到站，应停。持签的，打灯的，收票的，站岗的，脚行，正站长，副站长，办事员，书记，闲员，都干瞪眼，站上没有救火设备”（麻木的群众）</p><p id="1e92ffb4-7bd1-466c-9b8c-c7eeb1be780d" class="">“车长无所知，头号金箍帽无所知，二号金箍帽无所知，天津大汉无所知，山东大汉无所知，老五无所知，起火原因不明。各站报告售出票数与所收票数，正相合，恰少六十三张，似与车俱焚，等于所拾尸数。各站俱未售出二等票，二等车必为空车，绝对不能起火。”（无所知的群众）</p><p id="dce9b5bd-be86-410b-83dc-b6c7c111c3a1" class="">我倒不着急，”五嫂想安慰安慰老五，“我倒真心疼你带来那些青韭，也叫火给烧了！”（在老五逃过火灾后被开除，老五的妻子不是庆幸老五幸存，而是可惜韭菜）</p><hr id="6daf475a-9ff2-4581-bd28-e36cc65d9b62"/><h3 id="d799bbce-4242-468c-b892-9590fbd448d7" class="">象征与讽刺</h3><p id="687f824b-56f1-4b69-882c-f7180564f5a2" class="">老舍的讽刺笔法：</p><p id="e58fd503-553f-4b67-abc7-40ee37523669" class="">1、检票检票——按理说二等车厢的票一张也没有卖出去，车厢应该是空的，但是最终是二等车厢起火了</p><p id="d4d98999-6422-4f47-9ffa-457020dd46c5" class="">2、特权阶级免票——乔先生拿的票上是女性“暗中谅解：除夕原可女变为男”</p><p id="a35d0f12-95ec-41bd-98da-677af7200480" class="">老五看准了当儿，轻步上前，报告张乔二位先生，查票。接过来，知是免票。乃特别加紧地恭敬。张先生的票退回；乔先生的稍迟，因为票上注明是女性，而乔先生是男子汉，实无可疑。二金箍帽的头稍凑近一处，极快的离开，暗中谅解：除夕原可女变为男。老五双手将票递回，甚多歉意。</p><p id="ab94e422-2c73-4119-92f7-0aa9c51bd622" class="">老舍的象征手法讽刺：</p><p id="7d95574d-88d8-400c-9f6d-d4eeb15784f0" class="">火找到新殖民地，物多人多，若狂喜，一舌吐出，一舌远掷，一舌半隐烟中，一舌突挺窗外，一舌徘徊，一舌左右联烧，姿体万端，百舌齐舞；渐成一团，为火球，为流星，或滚或飞；又成一片，为红为绿，忽暗忽明，随烟爬行，突裂烟成焰，急流若惊浪；吱吱作响，炙人肉，烧毛发；响声渐杂，物落人嚎，呼呼借风成火阵；全车烧起，烟浓火烈，为最惨的火葬！</p><hr id="f0781119-216e-47e1-87bb-f9d933926bc0"/><p id="32d6f470-01e0-4177-acd3-5f4cf3f65959" class="">
+</p><p id="d1764a6d-3f97-47a9-9b55-fbd108d6b169" class="">
+</p><h3 id="d44f36c8-b1ba-4172-b1c0-11098a5e7753" class="">图像</h3><p id="50b2cff3-63da-4858-871b-81ba195bf07e" class="">本文的插图</p><figure id="950eb5b1-4389-42c9-96d1-9c31bfa85de2" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%206.png"><img style="width:364px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%206.png"/></a><figcaption>图二：肥头胖脑的张先生</figcaption></figure><figure id="d1151b75-7aae-4d2f-b3c3-7954e294e8d7" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%207.png"><img style="width:326px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%207.png"/></a><figcaption>图三：骨瘦嶙峋的乔先生</figcaption></figure><figure id="f9b241bc-f3f3-4ae4-bcc1-d302d6afbac6" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%208.png"><img style="width:397px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%208.png"/></a><figcaption>图四：在火车上为张、崔先生递毛巾的男孩（检票员）</figcaption></figure><figure id="6d06225a-280e-4546-b227-3b0d287b49bb" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%209.png"><img style="width:714px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%209.png"/></a><figcaption>图五：张先生拿出的满洲国高管给的两瓶高粱酒</figcaption></figure><figure id="c1975f52-fd11-4d27-a12b-13e521981752" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%2010.png"><img style="width:324px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%2010.png"/></a><figcaption>图六：小个子崔先生</figcaption></figure><figure id="355b011b-49e4-4175-a0be-f9bffde2f380" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%2011.png"><img style="width:662px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%2011.png"/></a><figcaption>图六：三位先生喝得烂醉后的酒瓶</figcaption></figure><figure id="ec747609-2b1b-49e7-b295-415cbd5d228d" class="image"><a href="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%2012.png"><img style="width:431px" src="9%E2%80%94vol3%208ad4edd9b6f54ba4a2a881d8dae53b16/Untitled%2012.png"/></a><figcaption>图七：巧妙的图文结合，拥火车隧洞作为文章的“结束”，亦呼应小说中的“结束”</figcaption></figure></div></article></body></html>

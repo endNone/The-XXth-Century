@@ -1,0 +1,675 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>23-vol4</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e274598b-6f94-4984-b192-8463e84eff9b" class="page serif"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/met_edgar_degas_1874.jpg" style="object-position:center 30.000000000000004%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/book_blue.svg"/></div><h1 class="page-title">23-vol4</h1><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>文件中文名</th><td>中国电影</td></tr><tr class="property-row property-row-file"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>原件及翻译件</th><td><span style="margin-right:6px"><a href="23-vol4%20e274598b6f944984b1928463e84eff9b/14%25E4%25B8%25AD%25E5%259B%25BD%25E7%2594%25B5%25E5%25BD%25B1.pdf">14中国电影.pdf</a></span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>主题标签</th><td><span class="selected-value select-value-color-yellow">图像东方</span><span class="selected-value select-value-color-purple">现代性</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>理论</th><td><span class="selected-value select-value-color-brown">图像与“uncanny”</span><span class="selected-value select-value-color-red">摄影理论</span></td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>作者身份</th><td><span class="selected-value select-value-color-green">中国人</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>作者</th><td>LIU SZE-HSUN</td></tr><tr class="property-row property-row-file"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>拓展参考资料URL</th><td></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>摘要</th><td>作者对中国电影行业的发展作出了细致的分析</td></tr><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Editor</th><td><span class="selected-value select-value-color-orange">朱可涵</span></td></tr><tr class="property-row property-row-url"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesUrl"><path d="M7.69922 10.8945L8.73828 9.84863C7.91797 9.77344 7.34375 9.51367 6.91992 9.08984C5.76465 7.93457 5.76465 6.29395 6.91309 5.14551L9.18262 2.87598C10.3379 1.7207 11.9717 1.7207 13.127 2.87598C14.2891 4.04492 14.2822 5.67188 13.1338 6.82031L11.958 7.99609C12.1768 8.49512 12.2451 9.10352 12.1289 9.62988L14.0908 7.6748C15.7725 6 15.7793 3.62109 14.084 1.92578C12.3887 0.223633 10.0098 0.237305 8.33496 1.91211L5.95605 4.29785C4.28125 5.97266 4.26758 8.35156 5.96289 10.0469C6.36621 10.4434 6.90625 10.7441 7.69922 10.8945ZM8.30078 5.13184L7.26855 6.17773C8.08203 6.25293 8.66309 6.51953 9.08008 6.93652C10.2422 8.09863 10.2422 9.73242 9.08691 10.8809L6.81738 13.1504C5.66211 14.3057 4.03516 14.3057 2.87305 13.1504C1.71094 11.9883 1.71777 10.3545 2.87305 9.20605L4.04199 8.03027C3.83008 7.53125 3.75488 6.92969 3.87109 6.39648L1.91602 8.35156C0.234375 10.0264 0.227539 12.4121 1.92285 14.1074C3.61816 15.8027 5.99707 15.7891 7.67188 14.1143L10.0439 11.7354C11.7256 10.0537 11.7324 7.6748 10.0371 5.98633C9.64062 5.58301 9.10059 5.28223 8.30078 5.13184Z"></path></svg></span>URL</th><td></td></tr></tbody></table></header><div class="page-body"><h3 id="720bbae5-84ba-41c0-8205-bbb622ab9225" class="">图像</h3><figure id="97496e20-d0ab-45fc-935a-352a6141a91a" class="image"><a href="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled.png"><img style="width:735px" src="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled.png"/></a><figcaption>图一：18岁的李丽华是中国最伟大的电影明星之一(Makita摄)</figcaption></figure><figure id="8acb0574-cec6-472a-a9dd-a8de0c10c692" class="image"><a href="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled%201.png"><img style="width:782px" src="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled%201.png"/></a><figcaption>组图二：由上至下配文</figcaption></figure><p id="e5687d97-931d-4264-89ae-25dce93c1bbd" class=""><mark class="highlight-gray">1.《小妇人》中的梅茜和袁美云，描绘了上海贫民窟的生活蝴蝶吴。</mark></p><p id="1d580746-a4b6-4f70-89c0-5f2fd3e34be1" class=""><mark class="highlight-gray">2、中国的前电影女王，在《当孔雀东南飞》中。请注意中国版的好莱坞卧室。</mark></p><p id="419a76fe-6705-4ab9-856f-e902929a67cb" class=""><mark class="highlight-gray">3.袁美云在杰出的历史电影《物语》中。</mark></p><p id="4ceb4a39-6b0d-46e3-a033-77e0c62c6474" class="">
+</p><figure id="d2741e32-efa2-4c38-9608-63116fa4b651" class="image"><a href="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled%202.png"><img style="width:787px" src="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled%202.png"/></a><figcaption>组图三：中国电影界的杰出人物</figcaption></figure><p id="2a14ae23-cd09-457d-9b01-63469d1909a1" class=""><mark class="highlight-gray">1.左上：周迈华。深受“小镇”观众的欢迎</mark></p><p id="4dd36b36-2645-481f-981d-9b63f178d5dd" class=""><mark class="highlight-gray">2.中图：冉冉升起的新星陈Naney .中国最著名的电影明星，和刘萱(左)。家庭* called张韶光，主要导演，也是中国电影业的支持者。</mark></p><p id="e0ddadfe-1e6f-4dea-b48b-97dbe4a335cc" class=""><mark class="highlight-gray">3.左下：尹Hsiu-keng韩兰侃，中国的“</mark><mark class="highlight-gray"><strong>劳莱与哈代”（美国早期戏剧节目名，也指该节目的两位滑稽演员斯坦劳莱和奥立佛哈代）</strong></mark><mark class="highlight-gray">王坛风。</mark></p><p id="3e77bf2a-e3c5-45c3-bd4d-b7578347acb1" class=""><mark class="highlight-gray">4.右上：S. K. Chang，重要导演和中国的电影产业的支持人</mark></p><p id="4d29e816-1571-4cf1-9185-6aa5393d9a28" class=""><mark class="highlight-gray">5.右下：王汤凤 .冉冉升起的新星。</mark></p><figure id="0d2e747d-5a81-48db-994f-d935b950492e" class="image"><a href="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled%203.png"><img style="width:819px" src="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled%203.png"/></a><figcaption>组图四：电影或戏剧画面</figcaption></figure><p id="d89a34aa-4b39-4c34-b00e-e2036397fdb1" class="">1.左上一：中国的“哈利·奥利弗”</p><p id="63ecb375-ce43-43bf-a0c2-f1a018f09e2c" class="">2.左中：王圆陆和蝴蝶吴《孔雀东南飞》剧照</p><p id="af4f1b57-7efe-4a5d-86b9-6eda0c832534" class="">3.左下：梅氏是一位老练的肖像画家。</p><p id="8f6a10da-6b33-42df-a287-3daa514274f5" class="">4.右上：高汉飞，政治人物，历史上著名的演员。</p><p id="402ba047-7fbb-49ae-a48e-537444ec039f" class="">5.右下：陈艳雯在《家》中，被阴先生用惊奇的目光看着、被张明用责备的眼神看着。</p><p id="d04d34b7-45e8-4075-97c0-ec9d68af1180" class="">他眼中的中国人表面上接受新形式的娱乐，实际上仍然固守着模仿着过去舞台上的表演。同样的京剧观众也会去看舞台剧的屏幕版本。他们想看看同样的剧目在屏幕上是什么样子，以一种更简洁、更少象征性的形式。</p><p id="f2fba858-c6ce-4116-854b-f9fea5ac22fb" class="">他认为中国人接受新事物的能力较弱，大多数中国人对他们理解范围内的事物表现出更大的兴趣，他们的思想围绕着有限的历史故事和人物，总是能从中找到魅力。</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="2250998c-9f4a-4bfe-aad7-6c3eeb16fce9"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">可以看出作者有一定的国族身份认同，一定程度上试图在外国人面前树立起自信，涉及国民性；图像东方也可以用，后面照片、电影也算是一种图像东方。</div></figure><hr id="593516d4-5cd9-45f4-a1d4-44283af90c05"/><p id="5dc8ffce-e998-43b5-acce-b0345aab6dec" class="">中国的电影市场很大，目前中国电影已经得到了很多支持，资金问题已经解决了。</p><p id="5831d3dd-83e1-4988-92d3-5d6081d02285" class="">
+</p><p id="c7f6cea2-ce3f-47f5-8d95-415872781b1d" class=""><strong>商务印书馆，中国最大的出版公司，是第一个进入电影制作领域的商业机构</strong>，在十年间(1917年至1927年)，它制作了许多图片，<strong>其中大多数是教育类的，为中国电影工业的初始阶段做出了巨大贡献</strong>。1919年，当美国环球影业公司的一个电影考察队到达上海，在中国不同的地方拍摄户外场景时，这个行业得到了巨大的推动。考察队曾寻求商务印书馆电影部的帮助，通过这种联系，中国人获得了大量的技术经验。同时，必须指出的是，电影制作所实现的巨大利润吸引了许多其他公司和个人进入电影制作领域，从而在1920 - 1925年期间，上海的电影制作公司如雨后春笋般增长。这些公司包括明星电影公司、广东电影公司和Unique Pictures, Ltd.。<strong>尽管受到好莱坞的影响，这些公司在财务上独立于美国资本。</strong></p><p id="56083aa3-374d-48df-907b-191d0f0427f4" class="">1930年，当一群杰出的海外华人(包括万金油大王吴文宝)在香港成立了强大的联合影视剧服务机构时，整个电影工业经历了进一步的实质性发展。在罗明玉精干的经营下，这家公司后来在上海和北平各经营了三家制片厂，每年都制作出大量的好作品，包括著名的《渔夫之歌》，灵感来自苏联的《伏尔加船夫》。中国最早的有声电影是在1929年由明星电影公司制作的，音响设备是在前一年由福克斯影业公司带来的。1933年，中国教育电影学会与罗马国际教育电影学会密切合作，政府利益进入了电影制作领域。1935年，精心设计的中央画室在南京落成，罗明宇担任总经理。浪漫与历史在主题方面，在中央工作室成立之前，大多数戏剧作品都围绕着情节剧性质的浪漫。<strong>1936年，这方面发生了明确的变化，当时大多数电影都致力于揭露中世纪的黑暗面，并指出重要的社会问题。当时的影评人、剧本作家和电影艺术家都提倡拍摄“国防片”。</strong>故事和场景是由著名的戏剧家提供的，如天汉和洪申，现在都在重庆。1937年8月战争爆发后，上海所有的电影制作公司都关闭了，中央制片厂和一群银幕艺术家被疏散到内地。直到1938年年中，有中国好莱坞之称的上海的电影工业，星电影公司重组为乌托邦电影公司，并成立了不少于八家新公司，包括新和公司和宜华公司。这种复兴开创了制作历史和民间传说图片的时尚。</p><p id="65b9865c-dd69-4722-9d8b-4feee0d86892" class=""><strong>在短短的两年时间里(1938/40)，至少有120部古典电影问世，其中任何一部的票房收入都超过了现代电影的最高纪录。</strong>虽然从技术上讲，这些作品可能还有很多不尽如人意的地方，但它们确实帮助制片人重新站起来了。必须指出的是，这些历史照片为中国电影工业开辟了一条新的道路。此外，他们还赢得了很大一部分京剧观众，因为大多数画面都是根据几个世纪以来在传统舞台上改编的故事改编的。1938年下半年，中国电影公司成立，在中国第一次实行了统一的发行制度和流动电影单位。1941年12月8日，大东亚战争爆发后，华中地区唯一的中日合资企业——中国电影公司，被南京国民政府授予全权控制所有中外电影发行的权利，并监督华中和华南地区所有电影制作单位的工作。今年4月，在中国电影公司副总裁川田长正先生的指导下，上海各大电影制作公司，包括新和、宜和、口华星和金星，合并为中国联合电影制作公司。采取这一步骤是为了加强生产机器，并为人才提供更大的展示范围。增资300万美元</p><p id="36b85758-735a-4ee1-923a-2c5ae35094be" class="">导演了几位上海的财界大佬，包括朱佩雷、郭克森和黄凯明，并制定了一个详细的计划，未来每月至少制作四部电影。</p><p id="d6a9ee6f-741b-4d54-9474-4a7c5ffa9e68" class=""><strong>舞台和银幕中国人很有戏剧意识，没有哪个国家的舞台对银幕的影响能像中国那样大。在一些历史图片中，男女演员对传统舞台表演的模仿达到了可笑的程度，而没有意识到中国舞台的习惯是中国戏剧传统所特有的。然而，中国人喜欢它。同样的京剧观众也会去看舞台剧的银幕版。他们想看到同样的戏剧在银幕上是什么样子，以一种更具体、更少象征性的形式。</strong><span style="border-bottom:0.05em solid"><em>大多数中国人对他们理解范围内的事物表现出更大的兴趣，因为他们的思想围绕着有限的历史故事和人物，他们总能在其中找到魅力。</em></span>但不幸的是，大多数对中下层阶级有强烈吸引力的历史影片都没有得到适当的电影处理，尽管它们在经济上取得了成功，使它们的制片人赚得足够多的钱来弥补“中国事变”前八个月的损失，当时它们实际上是闲置的。现代舞台与中国电影产业有很大关系。事实上，它为电影艺术家提供了一个名副其实的训练基地。在过去的十年里，我们见证了一大批来自新阶段的银幕艺术家。他们中的大多数人都受过良好的教育，这使他们能够表达更微妙和更复杂的感情。他们为中国电影表演艺术的进步做出了巨大贡献。</p><p id="8c419016-bb01-4cbd-b504-56b1ba4313ea" class="">普及国语Yü(国语)。正如它们曾是国家统一的障碍一样，不同省份的各种方言也曾一度成为有声电影制作的障碍。<strong>正是由于所有主要电影制作公司的坚持使用，Kuo Yü才成为对话的官方语言</strong>。中国的新一代对Kuo Yü的理解一年比一年好。目前，在上海制作的图片都是“国语”，尽管在中国南方制作的图片也使用粤语。五年前有两张上海话的图片。为了南海地区的福建社区的利益，一些纪实图片和新闻短片也使用了福建方言进行解说。Unique Pictures是第一家在广东省和南海诸岛的大型粤语中心拍摄粤语对白电影的公司。中国电影主要出口到南海诸岛，偶尔也出口到美国。4年前由新华电影公司制作的历史巨制《貂蝉》在纽约百老汇成功放映了3周。这幅画和其他中国画在美国的成功，主要是因为它们引起了人们对中国人民古代习俗和习惯的好奇。此外，在美国有很大的华人社区，他们不会不利用自己偶尔展示的中国照片。</p><p id="144ec3e6-c76f-41cf-88c3-6cd9fc2519f2" class="">第一个出口的图片是著名的故事片《柳纹传》。它通过英伦三岛的Gaumont发行，在那里首次发行了750多张，随后在1926年和1927年在美国和世界其他地区同样成功。最近，日本和满洲国不断出口带有日语字幕的中国图片。</p><p id="a3fded75-e004-4750-9349-b2c591d600b8" class="block-color-yellow_background">鉴于国外人们对中国事物表现出的巨大兴趣，以及近年来中国发生的巨大变化，人们倾向于相信中国电影有进入世界市场的潜力。虽然从技术的角度来看，他们不可能经得起任何严格的竞争，但他们肯定可以凭借他们有趣的故事赢得一席之地。出口业务中的语言障碍并不像一般想象的那么严重，因为外语字幕的叠加可以很容易地解决这个困难。由于目前没有西方市场，所以没有使用西方语言的字幕。</p><p id="132439c1-7b6e-4231-807c-3d7ed4491bdf" class="block-color-yellow_background"><strong>但我们有理由预计，一旦出口再次成为可能，就会尽快采取行动。</strong></p><p id="3c3b16ad-cb60-4bae-b2af-c341e76cfa25" class="">旧的和新的中国电影观众想要的银幕艺术家不仅仅是长得好看的男人和女人。他们想<strong>要聪明、有才华、受过良好教育、精通表演艺术的明星</strong>。在过去的二十年里，给影迷留下深刻印象的明星有李敏慧小姐、朱琳玉小姐和吴蝴蝶小姐;晁谭先生，王子龙先生，王志龙先生。高灿飞， 王元龙先生，王南东先生。除了最后提到的三位现在已经回到上海，这些银幕名人大多已经退休或去世。李敏惠小姐，作为一个知名的明星，在大约八年前曾是一个引人注目的人物，现在几乎是一个被银幕遗忘的人物。超谭现在住在内地的某个地方，吴蝴蝶小姐也住在那里。</p><p id="9c555844-07e2-4d25-8644-8efe4d6c6c4f" class="">陈南希小姐最受欢迎的主演是花木兰(中国的圣女贞德)陈小姐最宝贵的财产是魅力和青春活力。她也有最基本的条件——她知道如何充分利用生活并享受生活。</p><p id="148f6ae6-bdc3-4921-96d2-e7ef653509dd" class="">目前，荧屏上最受欢迎的魅力女孩是<strong>古丽缇小姐。她的成功要归功于两部电影《吸血鬼》(见《xx世纪》，1942年3月)和《寻欢作乐的米拉迪》</strong>，她在其中饰演主角，并以大胆的表演赢得了赞誉。十多年前开始演艺生涯的古永锵，直到去年出现了上述两张照片，才受到了人们的关注。她作为一个女演员的成熟，以及她不可否认的“性感”，是她目前受欢迎的主要原因。</p><p id="7176a5d0-9dbb-420f-9c54-48361e85ec25" class="">其他一流的电影女演员包括袁美云、周麦花、王宝强.</p><p id="2751956a-4a5a-48ae-b423-33cfcd865eb0" class="">谭峰和陈妍妍。袁小姐在进入影视圈之前是一位著名的京剧明星。她有一种近乎经典的美，所以当她在《美人之美》中扮演西丝时，她获得了她电影生涯中最大的成功。周麦花小姐是典型的中产阶级女孩，深受家庭主妇和店主的喜爱。她还以训练有素的悲伤情感表达而闻名。王檀凤小姐是一朵含苞待放的花朵，充满了可爱和光彩，受到了男女老少的喜爱。到目前为止，她还没有扮演任何重要的角色;但可以预见，她是有前途的。陈妍妍小姐代表了一幅爱情受挫的画面。在中国联合电影制作公司的第一部电影《蝴蝶夫人》中，她表现得最好，因为在日常生活中，她就是那种类型的女孩。被遗忘的人在中国，女演员比男演员更受关注，但每个人都知道至少有四位杰出的男性明星： 王元龙、高长飞、刘春，梅茜。王元龙是四人中年龄最大的，已经在银幕上出现了大约20年。他以他的人物塑造能力和完美的表演而闻名。他有很好的京剧表演功底，对中年历史人物的演绎无人能及。</p><p id="c7bea015-f0d8-44b9-bb05-023fba78b01a" class="">高昌飞，1942年春从重庆回来，面对镜头已经有二十年了，已经取得了一个值得关注的地位。他是王元龙的好朋友，两人都是北方军校的毕业生。在他的职业生涯中，高锟从来没有犯过中国男女演员常见的错误，即过度表演。在即将上映的电影《走向永恒》中，他饰演了令人垂涎的林志徐总督一角。由于他的良好体格，他总是被赋予一个正义的人在历史和现代的图片。</p><p id="fd107821-0e15-45d9-92f7-7166ed6343af" class="">
+</p><p id="40f54b06-5ca1-47b9-8e3e-c7bda41ac0b4" class="">韩蓝光和尹绍坑中国版的《桂冠》和《哈代》为中国电影注入了喜剧的火花，并教会中国人去看事物轻松的一面。这一成就对中国电影的进步做出了巨大贡献;因为，在这些喜剧演员出现在银幕上之前，现代意义上的欢乐和幽默在舞台和银幕上都是显而易见的。现代中国要感谢这两个人。</p><p id="2500b75e-132c-419a-82f8-3171fad71ae6" class="">
+</p><p id="143e9057-0f3a-41f6-b7fc-d76f00d5139e" class="">文学主题和鸳鸯</p><p id="ba5894b9-da01-43b4-b24e-659ee3fa774b" class="">1936年以前的中国电影题材多以浪漫和悲剧为主，或多或少沿照传统舞台戏剧的模式，但1936年以后的政府领导人开始认识到<strong>宣传的价值</strong></p><p id="fea28bf5-55f1-4b42-8346-ac08fe08f899" class="">通过屏幕，与此同时，文化领袖们提倡为<strong>教育目的</strong>制作图片。因此，描写军阀时代的弊端和腐败社会状况的故事被放映出来。在很短的一段时间内，<strong>“国防”</strong>类型的图片被制作出来。</p><p id="f319af75-ff74-4490-ad59-74ce69e89e72" class="">大约三年前，当历史和民间传说图片开始流行时，人们开始疯狂地寻找故事。<strong>历史上任何可能被改编成电影主题的东西都被利用了</strong>，几乎所有的历史和传奇人物都在银幕上出现过。其中有中国历代圣人孔子;永垂不朽的宋朝名将佛飞;武松，中国的参孙;武则天，中国历史上唯一的女统治者;杨贵妃，替罪羊唐明皇的宠儿。人类的类型包括国王和王后、学者和士兵、总督和叛徒、美女和荡妇、英雄和恶棍、交际花和歌女、剑客和魔术师。紧跟着历史和民俗绘画的潮流，根据所谓的“鸳鸯蝴蝶”派小说创作绘画的时尚开始了。这种小说在共和国早期很受欢迎。它们以民国初年的社会背景为背景，描写男女之间的私情，标志着小说创作领域的一个新起点。虽然这种类型的小说在当时的中国很受欢迎，但它并没有给今天的影迷带来什么引人注目的东西。</p><p id="bb586877-4b60-4281-9e52-f05f7eda6909" class="">在过去的两年里，<strong>现代小说被改编成电影故事。</strong>著名的例子有《家族》(见1941年11月出版的《第二十世纪》)、《春秋》——帕金的一系列小说。自从大东亚战争爆发以来，<strong>在剧本创作方面，普遍的趋势是鼓励人民帮助完成建设国家的巨大任务大东亚共荣圈。这部由中国电影公司和满洲国电影公司联合制作、耗资300万美元、在中国联合电影制作公司拍摄的电影《走向永恒》，以相当坦率的方式讲述了英国如何迫使中国割让香港的故事，同时也旨在让中国人民认识到英帝国主义战争所造成的苦难的残酷现实。</strong>故事围绕着林志徐总督的一生展开，他是中国最伟大的爱国者之一，他承担起了根除鸦片罪恶的任务。</p><p id="8733e064-4702-4612-973b-e6c9b17ff36c" class=""><strong>除了中国电影公司自己的审查外，该公司制作的电影还必须分别接受上海市议会、法国市政议会和南京宣传部的审查。由于中国电影公司和中国官方机构之间的密切合作，审查人员很少行使他们的权力。</strong></p><h3 id="a6732edf-49df-4d72-8b8f-08652af457d5" class="">图像</h3><figure id="3a51944b-4c84-401c-b5b3-d018cc3bbe8d" class="image"><a href="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled%201.png"><img style="width:782px" src="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled%201.png"/></a><figcaption>组图二：由上至下配文</figcaption></figure><p id="0ba979e4-3e8f-4553-a197-654881bcedd6" class=""><mark class="highlight-gray">1.《小妇人》中的梅茜和袁美云，描绘了上海贫民窟的生活蝴蝶吴。</mark></p><p id="1fc22cfb-488d-4cea-b56f-97def140ca4e" class=""><mark class="highlight-gray">2、中国的前电影女王，在《当孔雀东南飞》中。请注意中国版的好莱坞卧室。</mark></p><p id="ad5eed73-6171-4f18-a3c3-17b6f43767be" class=""><mark class="highlight-gray">3.袁美云在杰出的历史电影《物语》中。</mark></p><p id="d0f053b3-9ef9-4dbe-b90b-ab9d221bbe47" class="">
+</p><figure id="984421a1-bbaa-419c-ba36-31041f0b90aa" class="image"><a href="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled%202.png"><img style="width:787px" src="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled%202.png"/></a><figcaption>组图三：中国电影界的杰出人物</figcaption></figure><p id="5bdc7057-f415-493f-a0b5-d93d3860e3eb" class=""><mark class="highlight-gray">1.左上：周迈华。深受“小镇”观众的欢迎</mark></p><p id="d0c0f9c0-b3a6-4c79-ac27-4f9a075e9e9e" class=""><mark class="highlight-gray">2.中图：冉冉升起的新星陈Naney .中国最著名的电影明星，和刘萱(左)。家庭* called张韶光，主要导演，也是中国电影业的支持者。</mark></p><p id="4bcdbad3-37d2-441b-be5f-ce1acf9d8221" class=""><mark class="highlight-gray">3.左下：尹Hsiu-keng韩兰侃，中国的“</mark><mark class="highlight-gray"><strong>劳莱与哈代”（美国早期戏剧节目名，也指该节目的两位滑稽演员斯坦劳莱和奥立佛哈代）</strong></mark><mark class="highlight-gray">王坛风。</mark></p><p id="9d4d0409-45f9-44d6-b450-aaa37acb481b" class=""><mark class="highlight-gray">4.右上：S. K. Chang，重要导演和中国的电影产业的支持人</mark></p><p id="c5409937-3f86-4bcc-92aa-296292c1587c" class=""><mark class="highlight-gray">5.右下：王汤凤 .冉冉升起的新星。</mark></p><figure id="66def575-28b9-45b9-be7b-7f4554eda160" class="image"><a href="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled%203.png"><img style="width:819px" src="23-vol4%20e274598b6f944984b1928463e84eff9b/Untitled%203.png"/></a><figcaption>组图四：电影或戏剧画面</figcaption></figure><p id="b134c1ad-38bf-444a-b292-fa73e5fc7663" class="">1.左上一：中国的“哈利·奥利弗”</p><p id="409bd8e0-8706-41f4-92f6-9002f14936f3" class="">2.左中：王圆陆和蝴蝶吴《孔雀东南飞》剧照</p><p id="646086d2-b4a4-4576-959d-ca14695934a1" class="">3.左下：梅氏是一位老练的肖像画家。</p><p id="7aab281e-1db2-4fbf-9938-53f06df063c8" class="">4.右上：高汉飞，政治人物，历史上著名的演员。</p><p id="24ea83b8-f228-44bd-8ec1-7880c58af83e" class="">5.右下：陈艳雯在《家》中，被阴先生用惊奇的目光看着、被张明用责备的眼神看着。</p><p id="35c0c0e6-d544-469c-ae28-ea4054cc064c" class="">
+</p></div></article></body></html>
